@@ -4,6 +4,7 @@ import Data.Menu;
 import Model.Order;
 import Model.OrderList;
 import Model.Pizza;
+import Data.OrderUpload;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -35,6 +36,7 @@ public class CaseMethods {
             System.out.println("Vælg ny pizza eller skriv nej for at afslutte bestilling");
         }
         orderlist.addOrder(order);
+        OrderUpload.writeOrderToDB(order);
     }
 
     public static void caseTwo(OrderList orderlist) {

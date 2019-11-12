@@ -5,6 +5,7 @@ import Presentation.MainMenu;
 import Presentation.MenuUI;
 import Model.Order;
 import Model.OrderList;
+import Data.OrderHistory;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -45,7 +46,7 @@ public class Controller {
                     break;
                 case 5:
                     //Ordrehistorik
-                    
+                    OrderHistory.printOrderHistory();
                     break;
                 case 6:
                     //Se statistik  
