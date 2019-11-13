@@ -8,6 +8,7 @@ public class MainMenu {
     
     public static void showOptions() {
         String stars = "********************************";
+        
         System.out.println(stars);
         System.out.println("Velkommen til Marios Pizzabar");
         System.out.println("Muligheder:");

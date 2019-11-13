@@ -9,6 +9,7 @@ import java.sql.SQLException;
  * @author Acer
  */
 public class DBConnector {
+    
     public static Connection getConnector() throws ClassNotFoundException, SQLException {
 		Connection connector = null;
 		String url = "jdbc:mysql://localhost:3306/mariopizza?";

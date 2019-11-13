@@ -68,5 +68,7 @@ public class CaseMethods {
     
     public static void caseSix() throws ClassNotFoundException, SQLException {
         Statistics.showMostPopular();
+        System.out.println("");
+        Statistics.showRevenueByDate();
     }
 }

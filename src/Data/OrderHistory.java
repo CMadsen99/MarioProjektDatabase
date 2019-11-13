@@ -29,7 +29,9 @@ public class OrderHistory {
         String pickup_time = "";
         String date = "";
         double price = 0;
+        
         System.out.println("Ordrenummer     Afhentning     Dato       Pris");
+        
         while (resultSet.next()) {
             order_id = resultSet.getInt("order_id");
             pickup_time = resultSet.getString("pickup_time");
@@ -38,7 +40,7 @@ public class OrderHistory {
 
             System.out.printf("%5d %17s %14s %8.2f kr.\n", order_id, pickup_time, date, price);
         }
-        //lukker efter mig
+
         resultSet.close();
         statement.close();
         myConnector.close();

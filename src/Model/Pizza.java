@@ -5,6 +5,7 @@ package Model;
  * @author Acer
  */
 public class Pizza {
+    
     String navn;
     String indhold;
     double pris;

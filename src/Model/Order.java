@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * @author Acer
  */
 public class Order {
+    
     private String afhentningsTidspunkt;
     private ArrayList<Pizza> pizzaer;
     private int ordrenummer;

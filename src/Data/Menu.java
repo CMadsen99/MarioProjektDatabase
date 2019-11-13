@@ -16,7 +16,7 @@ public class Menu {
     
     public static ArrayList<Pizza> menuList() throws ClassNotFoundException, SQLException {
         ArrayList<Pizza> returnList = new ArrayList<>();
-        // TODO: hent fra databasen
+
         Connection myConnector = null;
         Statement statement = null;
         ResultSet resultSet = null;
@@ -35,10 +35,10 @@ public class Menu {
             returnList.add(tempPizza);            
         }
 
-        //lukker efter mig
         resultSet.close();
         statement.close();
         myConnector.close();
+        
         return returnList;
     }
     

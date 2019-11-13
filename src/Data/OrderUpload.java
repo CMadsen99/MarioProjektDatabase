@@ -17,7 +17,6 @@ import java.time.LocalDate;
 public class OrderUpload {
 
     public static void writeOrderToDB(Order order) throws ClassNotFoundException, SQLException {
-
         Connection myConnector = null;
         PreparedStatement st = null;
         ResultSet resultSet = null;
@@ -35,11 +34,11 @@ public class OrderUpload {
         st.setString(1, order.getAfhentningsTidspunkt());
         st.setString(2, date.toString());
         st.executeUpdate();
+        
         st.close();
     }
 
     public static void writeOrderInfoToDB(Order order) throws ClassNotFoundException, SQLException {
-
         Connection myConnector = null;
         PreparedStatement st = null;
         ResultSet resultSet = null;
@@ -56,11 +55,11 @@ public class OrderUpload {
             st.setInt(2, pizza.getNummer());
             st.executeUpdate();
         }
+        
         st.close();
     }
 
     public static int orderNumberCheck() throws ClassNotFoundException, SQLException {
-
         int retVal = 0;
 
         Connection myConnector = null;
@@ -79,6 +78,7 @@ public class OrderUpload {
         resultSet.close();
         statement.close();
         myConnector.close();
+        
         return retVal;
     }
 
