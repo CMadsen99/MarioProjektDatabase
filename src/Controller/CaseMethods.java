@@ -6,6 +6,7 @@ import Model.Order;
 import Model.OrderList;
 import Model.Pizza;
 import Data.OrderUpload;
+import Data.Statistics;
 import Model.MainMenuList;
 import Presentation.MenuUI;
 import java.sql.SQLException;
@@ -40,6 +41,7 @@ public class CaseMethods {
         }
         orderlist.addOrder(order);
         OrderUpload.writeOrderToDB(order);
+        OrderUpload.writeOrderInfoToDB(order);
     }
 
     public static void caseTwo(OrderList orderlist) {
@@ -62,5 +64,9 @@ public class CaseMethods {
     
     public static void caseFive() throws ClassNotFoundException, SQLException {
         OrderHistory.printOrderHistory();
+    }
+    
+    public static void caseSix() throws ClassNotFoundException, SQLException {
+        Statistics.showMostPopular();
     }
 }

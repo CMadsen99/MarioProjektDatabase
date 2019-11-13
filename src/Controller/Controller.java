@@ -2,10 +2,7 @@ package Controller;
 
 import Model.MainMenuList;
 import Presentation.MainMenu;
-import Presentation.MenuUI;
-import Model.Order;
 import Model.OrderList;
-import Data.OrderHistory;
 import Data.OrderUpload;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -15,7 +12,7 @@ import java.util.Scanner;
  * @author Acer
  */
 public class Controller {
-    
+
     public static void runProgram() throws ClassNotFoundException, SQLException {
         int input = 0;
         int exitValue = 9;
@@ -51,7 +48,7 @@ public class Controller {
                     break;
                 case 6:
                     //Se statistik  
-                    
+                    CaseMethods.caseSix();
                     break;
                 default:
                     //Afslut
