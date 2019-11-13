@@ -1,10 +1,13 @@
 package Controller;
 
 import Data.Menu;
+import Data.OrderHistory;
 import Model.Order;
 import Model.OrderList;
 import Model.Pizza;
 import Data.OrderUpload;
+import Model.MainMenuList;
+import Presentation.MenuUI;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -50,5 +53,14 @@ public class CaseMethods {
 
     public static void caseThree(OrderList orderlist) {
         orderlist.showOrderList();
+    }
+    
+    public static void caseFour() throws ClassNotFoundException, SQLException {
+        MainMenuList menuList = new MainMenuList();
+        MenuUI.viewMenuList(menuList);
+    }
+    
+    public static void caseFive() throws ClassNotFoundException, SQLException {
+        OrderHistory.printOrderHistory();
     }
 }

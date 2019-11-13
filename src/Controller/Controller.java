@@ -6,6 +6,7 @@ import Presentation.MenuUI;
 import Model.Order;
 import Model.OrderList;
 import Data.OrderHistory;
+import Data.OrderUpload;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -18,7 +19,7 @@ public class Controller {
     public static void runProgram() throws ClassNotFoundException, SQLException {
         int input = 0;
         int exitValue = 9;
-        int ordernumber = 1;
+        int ordernumber = OrderUpload.orderNumberCheck();
         Scanner myScan = new Scanner(System.in);
         MainMenuList menuList = new MainMenuList();
         OrderList orderlist = new OrderList();
@@ -42,11 +43,11 @@ public class Controller {
                     break;
                 case 4:
                     //Se menukort
-                    MenuUI.viewMenuList(menuList);
+                    CaseMethods.caseFour();
                     break;
                 case 5:
                     //Ordrehistorik
-                    OrderHistory.printOrderHistory();
+                    CaseMethods.caseFive();
                     break;
                 case 6:
                     //Se statistik  

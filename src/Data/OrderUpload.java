@@ -8,6 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.util.Date;
 
 /**
  *
@@ -20,24 +22,54 @@ public class OrderUpload {
         Connection myConnector = null;
         PreparedStatement st = null;
         ResultSet resultSet = null;
-
-        String query = "INSERT INTO orders ("
-                + " line,"
+        
+        LocalDate date = LocalDate.now();
+        
+//        String query = "INSERT INTO orders ("
+//                + " line,"
+//                + " order_id,"
+//                + " pickup_time,"
+//                + " pizza_id ) VALUES ("
+//                + "NULL, ?, ?, ?)";
+        
+        String query2 = "INSERT INTO orders ("
                 + " order_id,"
                 + " pickup_time,"
-                + " pizza_id ) VALUES ("
-                + "NULL, ?, ?, ?)";
+                + " date ) VALUES ("
+                + "NULL, ?, ?)";
 
         myConnector = DBConnector.getConnector();
-        st = myConnector.prepareStatement(query);
-        for (Pizza pizza : order.getPizzaer()) {
-            st.setInt(1, order.getOrdrenummer());
-            st.setString(2, order.getAfhentningsTidspunkt());
-            st.setInt(3, pizza.getNummer());
+        st = myConnector.prepareStatement(query2);
+        //for (Pizza pizza : order.getPizzaer()) {
+            //st.setInt(1, order.getOrdrenummer());
+            st.setString(1, order.getAfhentningsTidspunkt());
+            st.setString(2, date.toString());
             st.executeUpdate();
-            //break;
-        }
+        //}
         st.close();
+    }
+    
+    public static int orderNumberCheck() throws ClassNotFoundException, SQLException {
+        
+        int retVal = 0;
+        
+        Connection myConnector = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
+
+        myConnector = DBConnector.getConnector();
+        String query = "SELECT MAX(order_id) as result FROM orders";
+        statement = myConnector.createStatement();
+        resultSet = statement.executeQuery(query);
+        
+        if(resultSet.next()){
+            retVal = resultSet.getInt("result")+1;
+        }
+        
+        resultSet.close();
+        statement.close();
+        myConnector.close();
+        return retVal;
     }
 
 }
