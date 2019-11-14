@@ -38,7 +38,7 @@ CREATE TABLE `order_info` (
 
 LOCK TABLES `order_info` WRITE;
 /*!40000 ALTER TABLE `order_info` DISABLE KEYS */;
-INSERT INTO `order_info` VALUES (9,4),(9,9),(9,2),(10,3),(10,9),(10,2),(11,6),(11,9),(12,6),(12,8),(12,11),(12,3),(13,4),(13,9),(13,10);
+INSERT INTO `order_info` VALUES (9,4),(9,9),(9,2),(10,3),(10,9),(10,2),(11,6),(11,9),(12,6),(12,8),(12,11),(12,3),(13,4),(13,9),(13,10),(14,3),(14,4),(15,6),(15,9),(15,13),(16,6),(16,8),(17,6),(17,12),(17,14);
 /*!40000 ALTER TABLE `order_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,7 +54,7 @@ CREATE TABLE `orders` (
   `pickup_time` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (4,'22:30','2019-11-13'),(5,'22:30','2019-11-13'),(6,'22:30','2019-11-13'),(7,'10:30','2019-11-13'),(8,'14:30','2019-11-13'),(9,'15:56','2019-11-13'),(10,'13:45','2019-11-13'),(11,'23:45','2019-11-13'),(12,'23:45','2019-11-14'),(13,'21:30','2019-11-14');
+INSERT INTO `orders` VALUES (4,'22:30','2019-11-13'),(5,'22:30','2019-11-13'),(6,'22:30','2019-11-13'),(7,'10:30','2019-11-13'),(8,'14:30','2019-11-13'),(9,'15:56','2019-11-13'),(10,'13:45','2019-11-13'),(11,'23:45','2019-11-13'),(12,'23:45','2019-11-14'),(13,'21:30','2019-11-14'),(14,'13:30','2019-11-14'),(15,'14:45','2019-11-14'),(16,'14:56','2019-11-14'),(17,'15:49','2019-11-14');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-14 12:39:59
+-- Dump completed on 2019-11-14 14:00:56

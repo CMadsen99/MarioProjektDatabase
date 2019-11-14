@@ -75,4 +75,8 @@ public class CaseMethods {
         System.out.println("");
         Statistics.showRevenueByDate();
     }
+    
+    public static void nextLine() {
+        System.out.println("");
+    }
 }

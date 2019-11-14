@@ -27,32 +27,39 @@ public class Controller {
             switch (input) {
                 case 1:
                     //Opret ordre
+                    CaseMethods.nextLine();
                     CaseMethods.caseOne(orderlist, ordernumber);
                     ordernumber++;
                     break;
                 case 2:
                     //Fjern ordre
+                    CaseMethods.nextLine();
                     CaseMethods.caseTwo(orderlist);
                     break;
                 case 3:
                     //Se aktuel liste
+                    CaseMethods.nextLine();
                     CaseMethods.caseThree(orderlist);
                     break;
                 case 4:
                     //Se menukort
+                    CaseMethods.nextLine();
                     CaseMethods.caseFour();
                     break;
                 case 5:
                     //Ordrehistorik
+                    CaseMethods.nextLine();
                     CaseMethods.caseFive();
                     break;
                 case 6:
                     //Se statistik  
+                    CaseMethods.nextLine();
                     CaseMethods.caseSix();
                     break;
                 default:
                     //Afslut
-                    System.out.println("Afslut");
+                    CaseMethods.nextLine();
+                    System.out.println("Tak for i dag!");
                     input = exitValue;
             }
         }
