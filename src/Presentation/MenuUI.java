@@ -5,7 +5,7 @@ import Model.Pizza;
 
 /**
  *
- * @author Acer
+ * @author jonasjørgensen
  */
 public class MenuUI {
     

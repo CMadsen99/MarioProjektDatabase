@@ -10,7 +10,7 @@ import Util.DBConnector;
 
 /**
  *
- * @author Acer
+ * @author christianmadsen
  */
 public class Menu {
     

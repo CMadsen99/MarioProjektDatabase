@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Acer
+ * @author christianmadsen & jacobsimonsen & jonasjørgensen 
  */
 public class MainMenuList {
    

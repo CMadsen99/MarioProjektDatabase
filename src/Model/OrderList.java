@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Acer
+ * @author christianmadsen & jacobsimonsen & jonasjørgensen 
  */
 public class OrderList {
 

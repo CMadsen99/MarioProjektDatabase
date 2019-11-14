@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Acer
+ * @author christianmadsen & jacobsimonsen & jonasjørgensen 
  */
 public class CaseMethods {
 

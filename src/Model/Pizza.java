@@ -2,7 +2,7 @@ package Model;
 
 /**
  *
- * @author Acer
+ * @author christianmadsen & jacobsimonsen & jonasjørgensen 
  */
 public class Pizza {
     

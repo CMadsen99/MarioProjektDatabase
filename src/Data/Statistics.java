@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Acer
+ * @author christianmadsen
  */
 public class Statistics {
 

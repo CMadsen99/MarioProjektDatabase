@@ -12,7 +12,7 @@ import java.time.LocalDate;
 
 /**
  *
- * @author Acer
+ * @author christianmadsen & jacobsimonsen & jonasjørgensen 
  */
 public class OrderUpload {
 

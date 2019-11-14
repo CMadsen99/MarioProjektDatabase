@@ -2,7 +2,7 @@ package Presentation;
 
 /**
  *
- * @author Acer
+ * @author christianmadsen & jacobsimonsen & jonasjørgensen 
  */
 public class MainMenu {
     
