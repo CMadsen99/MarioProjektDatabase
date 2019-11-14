@@ -34,10 +34,14 @@ public class CaseMethods {
         order = new Order(pizzas, ordernumber, tempAT);
 
         while (myScan.hasNextInt()) {
-            tempPizza = Menu.menuList().get(myScan.nextInt() - 1);
-            myScan.nextLine();
-            order.addPizza(tempPizza);
-            System.out.println("Vælg ny pizza eller skriv nej for at afslutte bestilling");
+            try {
+                tempPizza = Menu.menuList().get(myScan.nextInt() - 1);
+                myScan.nextLine();
+                order.addPizza(tempPizza);
+                System.out.println("Vælg ny pizza eller skriv nej for at afslutte bestilling");
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Den valgte pizza findes ikke i menuen. Indtast nyt nummer");
+            }
         }
         orderlist.addOrder(order);
         OrderUpload.writeOrderToDB(order);
@@ -56,16 +60,16 @@ public class CaseMethods {
     public static void caseThree(OrderList orderlist) {
         orderlist.showOrderList();
     }
-    
+
     public static void caseFour() throws ClassNotFoundException, SQLException {
         MainMenuList menuList = new MainMenuList();
         MenuUI.viewMenuList(menuList);
     }
-    
+
     public static void caseFive() throws ClassNotFoundException, SQLException {
         OrderHistory.printOrderHistory();
     }
-    
+
     public static void caseSix() throws ClassNotFoundException, SQLException {
         Statistics.showMostPopular();
         System.out.println("");
